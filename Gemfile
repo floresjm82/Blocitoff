@@ -61,3 +61,5 @@ end
 
   # Used for encrypting User passwords
   gem 'bcrypt'
+
+  gem 'devise'
