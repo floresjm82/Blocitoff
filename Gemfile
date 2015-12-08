@@ -3,12 +3,17 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.3'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+
 
 group :production do
   gem 'pg'
 end
+
+group :development do
+# Use sqlite3 as the database for Active Record
+  gem 'sqlite3'
+end
+
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
@@ -53,3 +58,6 @@ group :development, :test do
 end
 
   gem 'bootstrap-sass'
+
+  # Used for encrypting User passwords
+  gem 'bcrypt'

@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
 
+  resources :users
   get "structure/home_page"
 
   get 'structure/index_of_tasks'
