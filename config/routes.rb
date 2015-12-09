@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
 
 
-  resources :users
+  resources :users, only: [:new, :create]
+
   get "structure/home_page"
 
   get 'structure/index_of_tasks'
