@@ -7,6 +7,7 @@ gem 'rails', '4.2.3'
 
 group :production do
   gem 'pg'
+  gem 'rails_12factor'
 end
 
 group :development do
@@ -17,6 +18,7 @@ end
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
+  gem 'shoulda-matchers'
 end
 
 # Use SCSS for stylesheets
