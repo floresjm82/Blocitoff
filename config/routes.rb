@@ -4,12 +4,9 @@ Rails.application.routes.draw do
   get 'items/show'
 
   devise_for :users
-  resources :users, only: [:new, :create, :show] do
+  resources :users, only: [:show] do
     resources :items, only: [:create]
   end
-
-  resources :sessions, only: [:new, :create, :destroy]
-
 
   get "structure/home_page"
 
