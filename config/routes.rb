@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
 
 
+  get 'items/show'
+
   devise_for :users
-  resources :users, only: [:new, :create, :show]
+  resources :users, only: [:new, :create, :show] do
+    resources :items, only: [:create]
+  end
 
   resources :sessions, only: [:new, :create, :destroy]
 
