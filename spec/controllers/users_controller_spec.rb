@@ -25,10 +25,10 @@ RSpec.describe UsersController, type: :controller do
   # adjust the attributes here as well.
   let (:new_user_attributes) do
     {
-        name: "BlocHead",
-        email: "blochead@bloc.io",
-        password: "blochead",
-        password_confirmation: "blochead"
+        name: "Jorge",
+        email: "floresjmjr@gmail.com",
+        password: "helloworld",
+        password_confirmation: "helloworld"
     }
   end
 
