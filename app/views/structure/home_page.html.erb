@@ -6,7 +6,10 @@
   <body>
     <h1>Blocitoff</h1>
     <p>A self-destructing to-do list to keep you focused on the things that really matter</p>
-    <p><%= link_to "Sign Up", new_user_path, class: 'btn btn-primary' %> Now!</p>
-
+    <% if user_signed_in? %>
+      Signed in as: <strong><%= current_user.email %></strong> |
+      <%= link_to "Sign Out", session_path, method: :delete %>
+    <% else %>
+      <p><%= link_to "Sign Up", new_user_path %> Now!</p> OR <%= link_to "Login In", new_session_path %>
   </body>
 </html>

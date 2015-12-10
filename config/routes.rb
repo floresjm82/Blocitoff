@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   devise_for :users
   resources :users, only: [:new, :create]
 
+  resources :sessions, only: [:new, :create, :destroy]
+
+
   get "structure/home_page"
 
   get 'structure/index_of_tasks'
