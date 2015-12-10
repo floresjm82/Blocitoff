@@ -10,5 +10,8 @@
   <%= current_user.email %>
 </p>
 
+<% current_user.items.each do |item| %>
+<% end %>
+
 
 <%= link_to 'Back', :back %>

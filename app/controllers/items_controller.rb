@@ -35,4 +35,5 @@ class ItemsController < ApplicationController
       redirect_to items_show_path
     end
 
+  end
 end
